@@ -1,0 +1,350 @@
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #0a0a0f, #000);
+  transition: background 1s ease; /* deixa suave */
+  color: #f5f5f5;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Efeito de onda */
+.energy-wave {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0;
+  transform: scale(0);
+  animation: energyPulse 1s ease-out forwards;
+}
+
+.gif-overlay {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+@keyframes energyPulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(0);
+    filter: blur(30px);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(2);
+    filter: blur(60px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3.5);
+    filter: blur(80px);
+  }
+}
+
+/* === HEADER === */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #c084fc;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.hero p {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* === GRID DE ESPADAS === */
+.sword-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* === CARD === */
+.sword-card0 {
+  background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(120, 0, 240, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.sword-card1 {
+  background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(120, 0, 240, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sword-card2 {
+  background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(120, 0, 240, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+/* FUNDINHO REAGINDO 1 */
+.sword-card0:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 25px rgba(13, 248, 111, 0.25);
+}
+
+.sword-card2:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 25px rgba(125, 2, 248, 0.25);
+}
+
+.sword-card1:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 25px rgba(0, 131, 246, 0.25);
+}
+
+/* === IMAGEM === */
+.sword-image-dark {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: drop-shadow(0 0 10px rgba(38, 235, 97, 0.3));
+}
+/* cor do quadrado */
+.sword-image0 img{
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: drop-shadow(0 0 10px rgba(38, 235, 97, 0.3));
+}
+
+.sword-image1 img {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: drop-shadow(0 0 10px rgba(166, 3, 247, 0.3));
+}
+
+.sword-image2 img {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: drop-shadow(0 0 10px rgba(1, 117, 241, 0.3));
+}
+
+/* parte 1 */
+
+.sword-card0:hover .sword-image0 img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(29, 242, 136, 0.6));
+}
+
+.sword-card2:hover .sword-image1 img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(119, 6, 232, 0.6));
+}
+
+.sword-card1:hover .sword-image2 img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(21, 160, 225, 0.6));
+}
+
+/* parte 2  === === === === === === === === === === === === === === === === === === === === === === === === === === === === === === === */
+
+.sword-card4:hover .sword-image0 img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(253, 126, 0, 0.6));
+}
+
+.sword-card5:hover .sword-image1 img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(241, 2, 2, 0.6));
+}
+
+.sword-card6:hover .sword-image2 img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(253, 2, 2, 0.6));
+}
+/* cor do quadrado de dento2 === === === === === === === === === === === === === ===== === === = === === ===  */
+
+.sword-image4 img{
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: drop-shadow(0 0 10px rgba(255, 149, 0, 0.3));
+}
+
+.sword-image5 img {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: drop-shadow(0 0 10px rgba(166, 3, 247, 0.3));
+}
+
+.sword-image6 img {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: drop-shadow(0 0 10px rgba(28, 243, 79, 0.3));
+}
+/* FUNDINDO REAGINDO 2 === === === === === === === === === === === === === === === === === === === === === === === === === === ===  */
+.sword-card4:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 25px rgba(252, 130, 0, 0.25);
+}
+
+.sword-card5:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 25px rgba(125, 2, 248, 0.25);
+}
+
+.sword-card6:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 25px rgba(19, 138, 1, 0.25);
+}
+
+/* ===== === === === ===  CARD === === === === === === === === === === === === === === === === === === === === === === === === */
+.sword-card4 {
+  background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
+  border: 1px solid rgba(255, 170, 1, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(250, 105, 1, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.sword-card5 {
+  background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(120, 0, 240, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sword-card6 {
+  background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
+  border: 1px solid rgba(3, 167, 25, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(1, 151, 46, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* === TEXTO === */
+.sword-card h2 {
+  margin-top: 1rem;
+  color: #e2d9ff;
+  font-size: 1.3rem;
+}
+
+.sword-card p {
+  margin-top: 0.7rem;
+  font-size: 0.95rem;
+  color: #b5b5b5;
+}
+
+/* === TAGS === */
+.tags {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: rgba(192, 132, 252, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  border-radius: 8px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* Estilo para vídeos dentro dos cards */
+.sword-video {
+  margin-top: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  display: none;
+}
+
+.main-wrapper {
+  transition: background 1s ease;
+  background: radial-gradient(circle at top, #0a0a0f, #000);
+}
+
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #0a0a0a;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #888;
+  font-size: 0.9rem;
+}
+
