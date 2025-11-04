@@ -16,14 +16,17 @@ body {
 }
 
 .botao {
-  display: inline-block;
-  background-color: #1b04e9; /* cor do botão */
-  color: white; /* cor do texto */
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none; /* remove o sublinhado */
-  font-weight: bold;
-  transition: background 0.3s;
+    color: rgb(0, 0, 0);    
+    box-shadow: 0 0 15px rgba(109, 4, 238, 0.6);
+    border-radius: 15px;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    font-size: 1.4rem;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 25px rgba(225, 1, 255, 0.75);
+    background: linear-gradient(145deg, #a30edf 0%, #642d5d 100%);
+    text-decoration: none;
 }
 
 .botao:hover {
