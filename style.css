@@ -1,4 +1,3 @@
-
 /* === RESET & BASE === */
 * {
   margin: 0;
@@ -9,35 +8,14 @@
 body {
   font-family: "Poppins", sans-serif;
   background: radial-gradient(circle at top, #0a0a0f, #000);
-  transition: background 1s ease; /* deixa suave */
+  transition: background 1s ease;
+  /* deixa suave */
   color: #f5f5f5;
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
 }
 
-<<<<<<< HEAD
-.botao {
-    color: rgb(0, 0, 0);    
-    box-shadow: 0 0 15px rgba(109, 4, 238, 0.6);
-    border-radius: 15px;
-    padding: 6px;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    font-size: 1.4rem;
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 0 25px rgba(225, 1, 255, 0.75);
-    background: linear-gradient(145deg, #a30edf 0%, #642d5d 100%);
-    text-decoration: none;
-}
-
-.botao:hover {
-  background-color: #45a049; /* cor quando passa o mouse */
-}
-
-=======
->>>>>>> 5ecbaf3d68da61c77cfac449d463a66afbca74bb
-/* Efeito de onda */
 .energy-wave {
   position: fixed;
   top: 0;
@@ -56,8 +34,13 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 
@@ -67,11 +50,13 @@ body {
     transform: scale(0);
     filter: blur(30px);
   }
+
   50% {
     opacity: 0.6;
     transform: scale(2);
     filter: blur(60px);
   }
+
   100% {
     opacity: 0;
     transform: scale(3.5);
@@ -80,20 +65,58 @@ body {
 }
 
 /* === HEADER === */
+.botao5 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  gap: 30px;
+}
+
+.pai {
+  width: 100%;
+  height: 50%;
+}
+
+.botao {
+  text-align: center;
+  font-size: 20px;
+  height: 35px;
+  width: 100px;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 15px rgba(109, 4, 238, 0.6);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 25px rgba(225, 1, 255, 0.75);
+  background: linear-gradient(145deg, #a30edf 0%, #642d5d 100%);
+  text-decoration: none;
+}
+
+.titulo {
+  height: 100%;
+  align-items: end;
+  display: flex;
+  justify-content: center;
+}
+
 .hero {
   text-align: center;
-  padding: 4rem 1rem;
+  height: 23dvh;
+  margin-top: 1px;
   background: rgba(0, 0, 0, 0.5);
 }
 
 .hero h1 {
+  height: 60px;
   font-size: 3rem;
   color: #c084fc;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
 .hero p {
-  margin-top: 0.8rem;
   font-size: 1.1rem;
   color: #ccc;
 }
@@ -121,6 +144,7 @@ body {
   overflow: hidden;
   cursor: pointer;
 }
+
 .sword-card1 {
   background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -146,6 +170,7 @@ body {
   overflow: hidden;
   cursor: pointer;
 }
+
 /* FUNDINHO REAGINDO 1 */
 .sword-card0:hover {
   transform: translateY(-8px) scale(1.02);
@@ -170,8 +195,9 @@ body {
   transition: transform 0.4s ease, filter 0.4s ease;
   filter: drop-shadow(0 0 10px rgba(38, 235, 97, 0.3));
 }
+
 /* cor do quadrado */
-.sword-image0 img{
+.sword-image0 img {
   width: 180px;
   height: auto;
   border-radius: 12px;
@@ -228,9 +254,10 @@ body {
   transform: scale(1.1);
   filter: drop-shadow(0 0 20px rgba(253, 2, 2, 0.6));
 }
+
 /* cor do quadrado de dento2 === === === === === === === === === === === === === ===== === === = === === ===  */
 
-.sword-image4 img{
+.sword-image4 img {
   width: 180px;
   height: auto;
   border-radius: 12px;
@@ -253,6 +280,7 @@ body {
   transition: transform 0.4s ease, filter 0.4s ease;
   filter: drop-shadow(0 0 10px rgba(1, 117, 241, 0.3));
 }
+
 /* FUNDINDO REAGINDO 2 === === === === === === === === === === === === === === === === === === === === === === === === === === ===  */
 .sword-card4:hover {
   transform: translateY(-8px) scale(1.02);
@@ -282,6 +310,7 @@ body {
   overflow: hidden;
   cursor: pointer;
 }
+
 .sword-card5 {
   background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -359,19 +388,6 @@ body {
   background: radial-gradient(circle at top, #0a0a0f, #000);
 }
 
-.botao {
-    color: rgb(0, 0, 0);    
-    box-shadow: 0 0 15px rgba(109, 4, 238, 0.6);
-    border-radius: 15px;
-    padding: 6px;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    font-size: 1.4rem;
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 0 25px rgba(225, 1, 255, 0.75);
-    background: linear-gradient(145deg, #a30edf 0%, #642d5d 100%);
-    text-decoration: none;
-}
 
 /* === FOOTER === */
 footer {
